@@ -6,7 +6,7 @@ $block: 'grid';
 
 .#{$block} {
 	&__container {
-		padding: 0 15px;
+		// padding: 0 15px;
 	}
 	&__row {
 		@include clear-fix();

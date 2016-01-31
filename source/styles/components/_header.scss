@@ -12,31 +12,48 @@ $block: 'st-header';
 		background-size: 100% 100%;
 		background-repeat: no-repeat;
 		min-height: 173px;
+		position: relative;
+
+
 	}
 
 	&__logo {
-		// position: absolute;
-	margin: 11px 10px 20px 10px;
+	margin: 10px 10px 36px 10px;
+	width: 300px;
+	height: 75px;
 
-	width: 90%;
-	// height: auto;
+	@media all and (min-width: 768px) {
+	width: 300px;
+	height: 75px;
+	max-width: none;;
+	max-height: none;
+	}
+
 	}
 
 	&__container {
-		margin-left:10px;
-		height: 31px;
-		border: 1px solid $grey-border;
-		background: $grey-icon-fill;
-		display: inline-block;
-		position: relative;
+		color: white;
+		padding-left: 15px;
+		padding-right: 15px;
+		padding-bottom: 15px;
 		box-sizing: border-box;
+
+	@media all and (min-width: 768px) {
+	padding-top: 20px;
+	float: right;
 	}
 
+	}
+
+
 	&__container-phone {
+		position: relative;
 		box-sizing: border-box;
 		width: 157px;
-		// display: block;
+		display: inline-block;
 		padding: 7px 0 7px 33px;
+		border: 1px solid rgba(255, 255, 255, 0.8);
+		background-color: rgba(50, 50, 50, 0.6);
 
 
 		&:before {
@@ -48,15 +65,20 @@ $block: 'st-header';
 			height: 16px;
 			top: 7.5px;
 			left: 7.5px;
-			// padding-right: 4px;
 		}
 	}
 
 	&__container-email {
+		position: relative;
 		box-sizing: border-box;
 		width: 81px;
-		// padding-left: 33px;
+
 		padding: 7px 0 7px 33px;
+		margin-right: 45px;  //margins dont collapse between email and phone
+		display: inline-block;
+		border: 1px solid rgba(255, 255, 255, 0.8);
+		background-color: rgba(50, 50, 50, 0.6);
+
 
 		&:before {
 			background-image: url('/images/mail.png');
