@@ -1,29 +1,31 @@
 @import '../reference/reference';
 
-$block: 'services';
+$block: 'st-services';
 
 .#{$block} {
-
-	&__wrapper {
 	background-color: $services-bg;
+	padding: 0 15px;
 
+	h2 {
+     	margin: 1em;
 	}
 
-	&__wrapper h2 {
-     	margin: 0;
-		padding: 15px 23px;
-
-	}
 	&__button {
 		position: relative;
-		width: 100%;
+		display: block;
 
 		background-color: #4a90e2;
-		border: 1px solid $white;
+		border-top: 1px solid $white;
+		border-bottom: 1px solid $white;
 		border-radius: 2px;
-		padding: 9px 0;
-		margin-right: 40px;
+		padding: 9px 15px;
+		margin: 0 -15px;
 		// padding-right: 40px;
+
+		@media all and (min-width: 768px) {
+			height: 59px;
+		}
+
 	}
 
 	&__button:after {
@@ -40,4 +42,53 @@ $block: 'services';
 		margin-top: -3.5px;
 
 	}
+
+	.st-services__item {
+		position: relative;
+
+		& > * {    //this means target all children
+			position: relative;
+			z-index: 100;
+		}
+
+		&-content {
+			display: none;;
+		}
+
+		p {
+			display: none;
+		}
+
+
+		&--active {
+			@media all and (max-width: 768px) {
+				&:before {
+					background-color: #4a90e2;
+					content: '';
+					position: absolute;
+					top: 0;
+					bottom: 0;
+					right: -15px;
+					left:-15px;
+				}
+			}
+			@media all and (min-width: 768px) {
+				background: none;
+			}
+
+			p {
+				display: block;
+				@media all and (min-width: 768px) {
+					display: none;
+				}
+			}
+
+			& ~ .st-services__item-content {
+				@media all and (min-width: 768px) {
+					display: block;
+				}
+			}
+		}
+	}
+
 }
