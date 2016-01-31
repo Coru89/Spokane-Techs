@@ -1,0 +1,40 @@
+// components/_grid.sass
+
+@import '../reference/reference';
+
+$block: 'grid';
+
+.#{$block} {
+	&__container {
+		padding: 0 15px;
+	}
+	&__row {
+		@include clear-fix();
+		margin: 0 -7.5px;
+	}
+
+	&__100 {
+		width: 100%;
+		float: left;
+		padding: 0 7.5px;
+		box-sizing: border-box;
+	}
+
+	&__100-50 {
+		width: 100%;
+		float: left;
+		padding: 0 7.5px;
+		box-sizing: border-box;
+
+		@media all and (min-width: 768px) {
+			width: 50%;
+		}
+	}
+
+	&__hidden {
+		display: none;
+	}
+
+	&--modifier {
+	}
+}

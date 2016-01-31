@@ -1,0 +1,84 @@
+// components/_header.sass
+
+@import '../reference/reference';
+
+$block: 'st-header';
+
+.#{$block} {
+
+
+	&__image {
+		background-image: url('/images/spokane.png');
+		background-size: 100% 100%;
+		background-repeat: no-repeat;
+		min-height: 173px;
+	}
+
+	&__logo {
+		// position: absolute;
+	margin: 11px 10px 20px 10px;
+
+	width: 90%;
+	// height: auto;
+	}
+
+	&__container {
+		margin-left:10px;
+		height: 31px;
+		border: 1px solid $grey-border;
+		background: $grey-icon-fill;
+		display: inline-block;
+		position: relative;
+		box-sizing: border-box;
+	}
+
+	&__container-phone {
+		box-sizing: border-box;
+		width: 157px;
+		// display: block;
+		padding: 7px 0 7px 33px;
+
+
+		&:before {
+			background-image: url('/images/old-phone.png');
+			background-repeat: no-repeat;
+			content: '';
+			position: absolute;
+			width: 20px;
+			height: 16px;
+			top: 7.5px;
+			left: 7.5px;
+			// padding-right: 4px;
+		}
+	}
+
+	&__container-email {
+		box-sizing: border-box;
+		width: 81px;
+		// padding-left: 33px;
+		padding: 7px 0 7px 33px;
+
+		&:before {
+			background-image: url('/images/mail.png');
+			background-repeat: no-repeat;
+			content: '';
+			position: absolute;
+			width: 18px;
+			height: 11.32px;
+			top: 9px;
+			left: 7.5px;
+	}
+}
+
+
+	&__span {
+		color: yellow;
+	}
+
+	&--modifier {
+	}
+
+	p {
+		color: green;
+	}
+}
