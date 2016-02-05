@@ -57,17 +57,12 @@ $block: 'st-services';
 		}
 
 		&-content {
-			display: none;;
-		}
-
-		p {
 			display: none;
 		}
 
 		&:after {
 			background-image: url('/images/arrow.png');
 		}
-
 
 		&--active {
 
@@ -88,15 +83,13 @@ $block: 'st-services';
 				font-weight: 600;
 			}
 
-			p {
-				display: block;
-				@media all and (min-width: 768px) {
-					display: none;
-				}
-			}
-
 			& ~ .st-services__item-content {
+				position: relative;
 
+				& > * {
+					position:relative;
+					z-index: 100;
+				}
 
 				&:before {  //this is kind of a fucked up way to fix margins ***not showing placeholder text
 					background-color: #4a90e2;
