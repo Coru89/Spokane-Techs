@@ -6,6 +6,14 @@ $block: 'st-services';
 	background-color: $services-bg;
 	padding: 0px 15px;
 
+	&__content-box {
+		display: none;
+
+		&--active {
+			display: block;
+		}
+	}
+
 	h2 {
      	margin: 1em; //why?
 	}
@@ -14,18 +22,12 @@ $block: 'st-services';
 		position: relative;
 		display: block;
 
-		// border-radius: 2px;
-		// padding: 9px 15px;
-		// margin: 0 -15px;
-		// padding-right: 40px;
 
 		@media all and (min-width: 768px) {
 			height: 59px;
 		}
 
-	}
-
-	&__tab:after {
+		&:after {
 		background-image: url('/images/arrow.png');
 		background-repeat: no-repeat;
 		content: '';
@@ -37,16 +39,18 @@ $block: 'st-services';
 		right: 20px;
 		top: 50%;
 		margin-top: -3.5px;
+	}
+
+		&-main {
+			padding: 9px 15px;
+			margin: 0 -15px;
+			background-color: #4a90e2;
+			border-top: 1px solid $white;
+			border-bottom: 1px solid $white;
+		}
 
 	}
 
-	&__tab-main {
-		padding: 9px 15px;
-		margin: 0 -15px;
-		background-color: #4a90e2;
-		border-top: 1px solid $white;
-		border-bottom: 1px solid $white;
-	}
 
 	.st-services__item {
 		position: relative;
