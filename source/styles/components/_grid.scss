@@ -31,16 +31,6 @@ $block: 'grid';
 		}
 	}
 
-	&__hidden {
-		display: none;
-
-		&--md {
-			@media all and (min-width: 768px) {
-				display: none;
-			}
-		}
-	}
-
 	&--modifier {
 	}
 }

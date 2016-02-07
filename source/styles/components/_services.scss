@@ -48,12 +48,15 @@ $block: 'st-services';
 			border-top: 1px solid $white;
 			border-bottom: 1px solid $white;
 		}
-
 	}
 
 
 	.st-services__item {
 		position: relative;
+
+		@media all and (min-width: 768px) {
+			height: 59px;
+		}
 
 		& > * {    //this means target all children
 			position: relative;
@@ -118,5 +121,17 @@ $block: 'st-services';
 			}
 		}
 	}
+
+	&__hidden {
+		display: none;
+		// background-color: $services-bg;
+
+		&--md {
+			@media all and (min-width: 768px) {
+				display: none;
+			}
+		}
+	}
+
 
 }
