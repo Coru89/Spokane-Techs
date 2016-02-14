@@ -1,0 +1,37 @@
+@import '../reference/reference';
+
+$block: 'st-services';
+
+.#{$block} {
+
+	&__residential {
+		background-color: $services-dark-green;
+	}
+
+	&__tab {
+
+		&-main-residential {
+			background-color: $services-light-green;
+		}
+	}
+
+	&__item {
+
+		&--active-residential {
+
+			@media all and (max-width: 768px) { //this is kind of a fucked up way to fix margins
+				&:before {
+					background-color: $services-light-green;
+				}
+			}
+
+			& ~ .st-services__item-content-residential {
+
+				&:before {  //this is kind of a fucked up way to fix margins ***not showing placeholder text
+					background-color: $services-light-green;
+
+				}
+			}
+		}
+	}
+}

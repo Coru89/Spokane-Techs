@@ -1,0 +1,135 @@
+@import '../reference/reference';
+
+$block: 'st-services';
+
+.#{$block} {
+	// background-color: $services-dark-blue;
+	padding: 0px 15px;
+
+	&__content-box {
+		display: none;
+
+		&--active {
+			display: block;
+		}
+	}
+
+	h2 {
+     	margin: 1em; //why?
+		margin-top: 0;
+	}
+
+	&__tab {
+		position: relative;
+		display: block;
+
+
+		@media all and (min-width: 768px) {
+			height: 59px;
+		}
+
+		&:after {
+		background-image: url('/images/arrow.png');
+		background-repeat: no-repeat;
+		content: '';
+		position: absolute;
+		width: 11px;
+		height: 7px;
+		background-repeat: no-repeat;
+		position: absolute;
+		right: 20px;
+		top: 50%;
+		margin-top: -3.5px;
+	}
+
+		&-main {
+			padding: 9px 15px;
+			margin: 0 -15px;
+			border-top: 1px solid $white;
+			border-bottom: 1px solid $white;
+		}
+	}
+
+
+	.st-services__item {
+		position: relative;
+
+		@media all and (min-width: 768px) {
+			height: 59px;
+		}
+
+		& > * {    //this means target all children
+			position: relative;
+			z-index: 100;
+		}
+
+		&-content {
+			display: none;
+		}
+
+		&:after {
+			background-image: url('/images/arrow.png');
+		}
+
+
+		&--active {
+
+			@media all and (max-width: 768px) { //this is kind of a fucked up way to fix margins
+				&:before {
+					// background-color: $services-light-blue;
+					content: '';
+					position: absolute;
+					top: 0;
+					bottom: 0;
+					right: -7.5px;
+					left:-7.5px;
+				}
+			}
+			@media all and (min-width: 768px) {
+				background: none;
+				text-decoration:underline;
+				font-weight: 600;
+			}
+
+			& ~ .st-services__item-content {
+				position: relative;
+
+				& > * {
+					position:relative;
+					z-index: 100;
+				}
+
+				&:before {  //this is kind of a fucked up way to fix margins ***not showing placeholder text
+					// background-color: $services-light-blue;
+					content: '';
+					position: absolute;
+					top: 0;
+					bottom: 0;
+					right: -7.5px;
+					left:-7.5px;
+				}
+
+
+				@media all and (min-width: 768px) {
+					display: block;
+					height: 65px;
+				}
+			}
+			&:after {
+				background-image: url('/images/arrow-active.png');
+			}
+		}
+	}
+
+	&__hidden {
+		display: none;
+		// background-color: $services-bg;
+
+		&--md {
+			@media all and (min-width: 768px) {
+				display: none;
+			}
+		}
+	}
+
+}
