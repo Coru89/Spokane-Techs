@@ -31,6 +31,6 @@ $( document ).ready(function () {
 
 	//expand and collapse all business services at once.
 	$('.st-services__tab-main').on('click', function () {
-		$(this).next('.st-services__content-box').toggleClass('st-services__content-box--active');
+		$(this).toggleClass('st-services__tab-main--active');
 	});
 });
