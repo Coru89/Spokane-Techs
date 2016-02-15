@@ -3,37 +3,12 @@
 $block: 'st-services';
 
 .#{$block} {
-	// background-color: $services-dark-blue;
 	padding: 0px 15px;
-
-	&__content-box {
-		// display: none;
-	}
 
 	h2 {
     	margin: 1em; //why?
 		margin-top: 0;
 	}
-
-	&__business-wrapper, &__residential-wrapper {
-
-		.st-services__content-box {
-			display: none;
-		}
-
-		.st-services__tab-main--active {
-
-			&:after{
-				background-image: url('../images/arrow-active.png');
-			}
-
-				~ .st-services__content-box {
-					display: block;
-				}
-		}
-	}
-
-
 
 	&__tab {
 		position: relative;
@@ -74,14 +49,8 @@ $block: 'st-services';
 				background-repeat: no-repeat;
 				position: absolute;
 			}
-
 		}
-
-
-
-
 	}
-
 
 	.st-services__item {
 		position: relative;
@@ -102,7 +71,6 @@ $block: 'st-services';
 		&:after {
 			background-image: url('/images/arrow.png');
 		}
-
 
 		&--active {
 
@@ -163,5 +131,23 @@ $block: 'st-services';
 			}
 		}
 	}
+}
 
+//this section handles the hiding of "content box" as well as switching the arrow icon to the active icon.
+&__business-wrapper, &__residential-wrapper {
+
+	.st-services__content-box {
+		display: none;
+	}
+
+	.st-services__tab-main--active {
+
+		&:after {
+			background-image: url('../images/arrow-active.png');
+		}
+
+			~ .st-services__content-box {
+				display: block;
+			}
+	}
 }
