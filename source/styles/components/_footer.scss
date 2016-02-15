@@ -1,0 +1,30 @@
+@import '../reference/reference';
+
+$block: 'st-footer';
+
+.#{$block} {
+	background-color: $footer-main;
+	width: 100%;
+	height: 472px;
+
+	h2 {
+		text-align: center;
+		margin: 0;
+
+	}
+
+	&__logo {
+		background-image: url('/images/logo.png');
+		width: 300px;
+		height: 75px;
+
+			@media all and (max-width: 768px) {
+				display: none;
+			}
+	}
+
+	form input {
+		display: block;
+		width: 100%;
+	}
+}

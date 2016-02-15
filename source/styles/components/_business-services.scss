@@ -19,7 +19,7 @@ $block: 'st-services';
 
 		&--active-business {
 
-			@media all and (max-width: 768px) { //this is kind of a fucked up way to fix margins
+			@media all and (max-width: 768px) { 
 				&:before {
 					background-color: $services-light-blue;
 				}
@@ -27,7 +27,7 @@ $block: 'st-services';
 
 			& ~ .st-services__item-content-business {
 
-				&:before {  //this is kind of a fucked up way to fix margins ***not showing placeholder text
+				&:before {
 					background-color: $services-light-blue;
 
 				}
