@@ -49,6 +49,7 @@ $block: 'st-services';
 				background-repeat: no-repeat;
 				position: absolute;
 			}
+
 		}
 	}
 
@@ -109,12 +110,12 @@ $block: 'st-services';
 					left:-7.5px;
 				}
 
-
 				@media all and (min-width: 768px) {
 					display: block;
 					height: 65px;
 				}
 			}
+
 			&:after {
 				background-image: url('/images/arrow-active.png');
 			}
@@ -131,23 +132,23 @@ $block: 'st-services';
 			}
 		}
 	}
-}
 
-//this section handles the hiding of "content box" as well as switching the arrow icon to the active icon.
-&__business-wrapper, &__residential-wrapper {
+	//this section handles the hiding of "content box" as well as switching the arrow icon to the active icon.
+	&__business-wrapper, &__residential-wrapper {
 
-	.st-services__content-box {
-		display: none;
-	}
-
-	.st-services__tab-main--active {
-
-		&:after {
-			background-image: url('../images/arrow-active.png');
+		.st-services__content-box {
+			display: none;
 		}
+
+		.st-services__tab-main--active {
+
+			&:after {
+				background-image: url('../images/arrow-active.png');
+			}
 
 			~ .st-services__content-box {
 				display: block;
 			}
+		}
 	}
 }
