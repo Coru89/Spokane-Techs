@@ -1,36 +1,29 @@
 @import '../reference/reference';
 
-$block: 'st-services';
+$block: 'st-services__business';
+
+
+
 
 .#{$block} {
+	background-color: $services-dark-blue;
 
-	&__business {
-		background-color: $services-dark-blue;
+	& .st-services__tab-main {
+		background-color: $services-light-blue;
 	}
 
-	&__tab {
-
-		&-main-business {
-			background-color: $services-light-blue;
-		}
-	}
-
-	&__item {
-
-		&--active-business {
-
-			@media all and (max-width: 768px) { 
-				&:before {
-					background-color: $services-light-blue;
-				}
+	& .st-services__item--active {
+		@media all and (max-width: 768px) {
+			&:before {
+				background-color: $services-light-blue;
 			}
+		}
 
-			& ~ .st-services__item-content-business {
+		& ~ .st-services__item-content {
 
-				&:before {
-					background-color: $services-light-blue;
+			&:before {
+				background-color: $services-light-blue;
 
-				}
 			}
 		}
 	}
