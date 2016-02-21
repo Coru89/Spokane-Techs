@@ -1,36 +1,30 @@
 @import '../reference/reference';
 
-$block: 'st-services';
+$block: 'st-services__residential';
+ //this style sheet is "scoped" to this class and cotnains the entirety of the html conentet related to business services
+//we can target only residential services elements by writing css rules with specificity by starting with the st-services_business class
+
+
 
 .#{$block} {
+	background-color: $services-dark-green;
 
-	&__residential {
-		background-color: $services-dark-green;
+	& .st-services__tab-main {
+		background-color: $services-light-green;
 	}
 
-	&__tab {
-
-		&-main-residential {
-			background-color: $services-light-green;
-		}
-	}
-
-	&__item {
-
-		&--active-residential {
-
-			@media all and (max-width: 768px) { 
-				&:before {
-					background-color: $services-light-green;
-				}
+	& .st-services__item--active {
+		@media all and (max-width: 768px) {
+			&:before {
+				background-color: $services-light-green;
 			}
+		}
 
-			& ~ .st-services__item-content-residential {
+		& ~ .st-services__item-content {
 
-				&:before {  //this is kind of a fucked up way to fix margins ***not showing placeholder text
-					background-color: $services-light-green;
+			&:before {
+				background-color: $services-light-green;
 
-				}
 			}
 		}
 	}
