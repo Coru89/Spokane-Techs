@@ -1,6 +1,7 @@
 @import '../reference/reference';
 
 $block: 'st-services__business';
+<<<<<<< HEAD
  //this style sheet is "scoped" to this class and cotnains the entirety of the html conentet related to business services
 //we can target only business services elements by writing css rules with specificity by starting with the st-services_business class
 
@@ -13,6 +14,19 @@ $block: 'st-services__business';
 		background-color: $services-light-blue;
 	}
 
+=======
+
+
+
+
+.#{$block} {
+	background-color: $services-dark-blue;
+
+	& .st-services__tab-main {
+		background-color: $services-light-blue;
+	}
+
+>>>>>>> origin/master
 	& .st-services__item--active {
 		@media all and (max-width: 768px) {
 			&:before {
