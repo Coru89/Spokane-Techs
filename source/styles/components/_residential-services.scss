@@ -4,8 +4,6 @@ $block: 'st-services__residential';
  //this style sheet is "scoped" to this class and cotnains the entirety of the html conentet related to business services
 //we can target only residential services elements by writing css rules with specificity by starting with the st-services_business class
 
-
-
 .#{$block} {
 	background-color: $services-dark-green;
 

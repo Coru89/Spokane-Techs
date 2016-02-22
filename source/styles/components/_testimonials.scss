@@ -1,14 +1,42 @@
 @import '../reference/reference';
 
 $block: 'st-testimonials';
+// margin: 15px 0;
 
 .#{$block} {
-	width:100%;
-	height:116px;
-	background-color: $testimonial;
-	color: $white;
+	// background-color: $testimonial;
+	// padding: 15px;
+	// width: 100%;
+	// height: auto;
+	// background-color: $testimonial;
+	padding: 0;
 
 	&__text {
+		display: block;
+		padding: 15px;
+		// padding-bottom: 42px;
+		width: 100%;
+
+
+		background-color: $testimonial;
+		position: relative;
+
+		@media screen and (max-width: 768px) {
+
+		}
+
+		@media screen and (min-width: 768px) {
+			margin-left: -7.5px;
+		}
+
+		& span {
+			display: block;
+			position: absolute;
+			right: 15px;
+			margin-top: 9px;
+			padding-bottom: 13px;
+		}
+
 
 		&--hidden {
 			@media screen and (max-width: 768px) {
