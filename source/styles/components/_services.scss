@@ -9,6 +9,7 @@ $block: 'st-services';
 		font-weight: $font-weight-light;
 		font-size: 18px;
 		padding: 30px;
+		margin:0;
 
 		& strong {
 
@@ -19,6 +20,7 @@ $block: 'st-services';
 	h3 {
 		font-weight: $font-weight-light;
 		font-size: 15px;
+
 	}
 
 	&__content-box {
@@ -28,6 +30,7 @@ $block: 'st-services';
 	&__tab {
 		position: relative;
 		display: block;
+
 
 		&:after {
 		background-image: url('/images/arrow.png');
@@ -70,6 +73,11 @@ $block: 'st-services';
 
 				~ .st-services__content-box {
 					display: block;
+
+					@media all and (min-width: 768px) {
+						max-width: 741px;
+					}
+
 				}
 			}
 
@@ -79,6 +87,7 @@ $block: 'st-services';
 
 	&__item {
 		position: relative;
+			// max-width: 344px;
 
 		& > * {    //this means target all children
 			position: relative;
