@@ -4,6 +4,7 @@ $block: 'st-services';
 
 .#{$block} {
 	padding: 0px 15px;
+	overflow-x: hidden;
 
 	& h2 {
 		font-weight: $font-weight-light;
@@ -41,7 +42,7 @@ $block: 'st-services';
 		height: 7px;
 		background-repeat: no-repeat;
 		position: absolute;
-		right: 20px;
+		right: 12.5px;
 		top: 50%;
 		margin-top: -3.5px;
 	}
@@ -53,6 +54,8 @@ $block: 'st-services';
 			border-bottom: 1px solid $white;
 			font-size: 18px;
 			font-weight: $font-weight-bold;
+			position:relative;
+
 
 			&:after{
 				background-image: url('../images/arrow.png');
@@ -63,7 +66,20 @@ $block: 'st-services';
 				height: 7px;
 				background-repeat: no-repeat;
 				position: absolute;
+
+				@media screen and (max-width: 768px) {
+					right: 20px;
+					top: 50%;
+				}
+
+				@media screen and (min-width: 768px) {
+
+				}
+
+
 			}
+
+
 
 			&--active {
 
@@ -76,6 +92,7 @@ $block: 'st-services';
 
 					@media all and (min-width: 768px) {
 						max-width: 741px;
+						margin: 0 auto;
 					}
 
 				}
@@ -106,7 +123,6 @@ $block: 'st-services';
 
 			@media all and (max-width: 768px) { //this is kind of a fucked up way to fix margins
 				&:before {
-					// background-color: $services-light-blue;
 					content: '';
 					position: absolute;
 					top: 0;
@@ -124,24 +140,26 @@ $block: 'st-services';
 			& ~ .st-services__item-content {
 				position: relative;
 
+
 				& > * {
 					position:relative;
 					z-index: 100;
 				}
 
 				&:before {  //this is kind of a fucked up way to fix margins ***not showing placeholder text
-					// background-color: $services-light-blue;
 					content: '';
 					position: absolute;
 					top: 0;
-					bottom: 0;
-					right: -7.5px;
-					left:-7.5px;
+				    bottom: 0;
+					// left: -7.5px;
+					// right:-7.5px;
+				    left: -9999px;
+				    right: -9999px;
 				}
 
 				@media all and (min-width: 768px) {
 					display: block;
-					height: 65px;
+
 				}
 			}
 

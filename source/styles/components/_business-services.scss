@@ -20,7 +20,7 @@ $block: 'st-services__business';
 		}
 
 		& ~ .st-services__item-content {
-
+			position: relative;
 			&:before {
 				background-color: $services-light-blue;
 
