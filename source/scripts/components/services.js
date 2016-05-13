@@ -14,6 +14,16 @@ $( document ).ready(function () {
 		//get content from correct service and display it into the single column row on ipad
 		var content = $(this).children('.st-services__hidden--md').text();
 		$(this).siblings('.st-services__item-content').children('p').text(content);
+
+		//Below was me trying to figure out how to edit a pseudo class (:before) using jquery. This only allowed me to edit the style sheet, not target specific elemnts.
+		//This would be better handled by creating a new class for borders and using .addclass / .removeclass
+
+		// $(this).closest('.grid__row').children('.st-services__tab').each(function () {
+		// 	document.styleSheets[0].addRule('.st-services__tab:before', 'border-style:hidden !important', 0);
+		// 	console.log('1++');
+		// });
+
+
 	});
 
 	//expand and collapse all business services at once.

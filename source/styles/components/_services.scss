@@ -33,6 +33,35 @@ $block: 'st-services';
 		display: block;
 
 
+		// border-bottom: #ffffff solid 1px;
+
+		@media screen and (min-width: 768px) {
+			max-width: 344px;
+			margin: 0 12.5px;
+
+			&:before {
+				position: absolute;
+				content: attr(data-attr);
+				border-bottom: #ffffff solid 1px;
+				bottom: 0px;
+				width: 95%;
+			}
+		}
+
+		@media screen and (max-width: 768px) {
+			&:before {
+				position: absolute;
+				content: '';
+				border-bottom: #ffffff solid 1px;
+				right: -9999px;
+				left: -9999px;
+				bottom: 0px;
+
+			}
+		}
+
+
+
 		&:after {
 		background-image: url('/images/arrow.png');
 		background-repeat: no-repeat;
@@ -48,13 +77,15 @@ $block: 'st-services';
 	}
 
 		&-main {
-			padding: 9px 15px;
-			margin: 0 -15px;
-			border-top: 1px solid $white;
 			border-bottom: 1px solid $white;
+			border-top: 1px solid $white;
 			font-size: 18px;
 			font-weight: $font-weight-bold;
-			position:relative;
+			margin: 0 -15px;
+			padding: 9px 15px;
+			position: relative;
+			text-align: center;
+
 
 
 			&:after{
@@ -65,7 +96,12 @@ $block: 'st-services';
 				width: 11px;
 				height: 7px;
 				background-repeat: no-repeat;
+				display: inline-block;
+				vertical-align: middle;
 				position: absolute;
+				top: 50%;
+				margin: -3.5px 10px 0 10px;
+
 
 				@media screen and (max-width: 768px) {
 					right: 20px;
@@ -135,6 +171,11 @@ $block: 'st-services';
 				background: none;
 				text-decoration:underline;
 				font-weight: 600;
+
+				&:before {
+					border-bottom: none;
+				}
+
 			}
 
 			& ~ .st-services__item-content {
@@ -179,6 +220,4 @@ $block: 'st-services';
 			}
 		}
 	}
-
-
 }
