@@ -14,6 +14,8 @@ padding: 20px 20px;
 		width: 100%;
 		padding-right: 15px;
 		position: relative;
+		font-weight: lighter;
+		font-size: 14px;
 
 		@media screen and (max-width: 768px) {
 
@@ -36,6 +38,7 @@ padding: 20px 20px;
 		padding-top: 20px;
 		display: block;
 		text-align: right;
+		color: $testimonials-name;
 	}
 
 	& em {

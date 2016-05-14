@@ -22,10 +22,34 @@ $block: 'st-services';
 		font-weight: $font-weight-light;
 		font-size: 15px;
 
+		@media screen and (min-width: 768px) {
+			font-size: 16px;
+		}
+
 	}
 
 	&__content-box {
 		display: none;
+	}
+
+
+//this hides the last TWO bottom borders on .st-services__tab:before psuedo class when in tablet + desktop state
+	@media screen and (min-width: 768px) {
+		.grid__row:last-of-type {
+			> .st-services__tab:before {
+				border-style: hidden;
+			}
+		}
+	}
+
+
+//this hides the last bottom border on .st-services__tab:before psuedo class when in mobile state
+	@media screen and (max-width: 768px) {
+		.grid__row:last-of-type {
+			> .st-services__tab:nth-of-type(2):before {
+				border-style: hidden;
+			}
+		}
 	}
 
 	&__tab {
@@ -33,26 +57,29 @@ $block: 'st-services';
 		display: block;
 
 
-		// border-bottom: #ffffff solid 1px;
-
 		@media screen and (min-width: 768px) {
 			max-width: 344px;
 			margin: 0 12.5px;
 
 			&:before {
 				position: absolute;
-				content: attr(data-attr);
-				border-bottom: #ffffff solid 1px;
+				content: '';
+				border-bottom: rgb(255, 255, 255) solid 1px;
+				border-bottom: rgba(255, 255, 255, 0.2) solid 1px;
+				opacity: 20%;
 				bottom: 0px;
-				width: 95%;
+				width: 94%;
+
 			}
 		}
 
 		@media screen and (max-width: 768px) {
+
 			&:before {
 				position: absolute;
 				content: '';
-				border-bottom: #ffffff solid 1px;
+				border-bottom: rgb(255, 255, 255) solid 1px;
+				border-bottom: rgba(255, 255, 255, 0.2) solid 1px;
 				right: -9999px;
 				left: -9999px;
 				bottom: 0px;
@@ -100,7 +127,7 @@ $block: 'st-services';
 				vertical-align: middle;
 				position: absolute;
 				top: 50%;
-				margin: -3.5px 10px 0 10px;
+				margin: -3.5px 0 0 10px;
 
 
 				@media screen and (max-width: 768px) {
@@ -149,6 +176,11 @@ $block: 'st-services';
 
 		&-content {
 			display: none;
+
+			&:before {
+				margin-top: -1px;
+			}
+
 		}
 
 		&:after {
@@ -158,6 +190,7 @@ $block: 'st-services';
 		&--active {
 
 			@media all and (max-width: 768px) { //this is kind of a fucked up way to fix margins
+
 				&:before {
 					content: '';
 					position: absolute;
@@ -168,15 +201,19 @@ $block: 'st-services';
 				}
 			}
 			@media all and (min-width: 768px) {
-				background: none;
-				text-decoration:underline;
-				font-weight: 600;
 
-				&:before {
-					border-bottom: none;
+
+				h3 {
+
+					background: none;
+					text-decoration:underline;
 				}
-
 			}
+
+			h3 {
+				font-weight: 600;
+			}
+
 
 			& ~ .st-services__item-content {
 				position: relative;
@@ -185,6 +222,7 @@ $block: 'st-services';
 				& > * {
 					position:relative;
 					z-index: 100;
+
 				}
 
 				&:before {  //this is kind of a fucked up way to fix margins ***not showing placeholder text
@@ -200,8 +238,8 @@ $block: 'st-services';
 
 				@media all and (min-width: 768px) {
 					display: block;
-
 				}
+
 			}
 
 			&:after {
@@ -215,6 +253,7 @@ $block: 'st-services';
 		// background-color: $services-bg;
 
 		&--md {
+			margin-right: 30px;
 			@media all and (min-width: 768px) {
 				display: none;
 			}
