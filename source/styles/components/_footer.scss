@@ -18,8 +18,16 @@ $block: 'st-footer';
 	h2 {
 		text-align: center;
 		margin: 0;
-		padding-top: 17px;
-		padding-bottom: 30px;
+
+		padding-bottom: 5px;
+		color: $contacts-value;
+		font-size: 18px;
+
+		@media all and (min-width: 768px) {
+			padding-bottom: 30px;
+			padding-top: 17px;
+			font-size: 22px;
+		}
 
 	}
 
@@ -34,10 +42,86 @@ $block: 'st-footer';
 			}
 	}
 
-	form input {
-		display: block;
-		width: 100%;
+	&__contact {
+		font-size: 16px;
+		color: $contacts-value;
+		border-bottom: $contacts-border solid 1px;
+		padding-bottom: 20px;
+
+		margin: 0;
+
+		@media all and (min-width: 768px) {
+			border: none;
+			padding-top: 40px;
+		}
+
+		&-type {
+			color: $contacts-type;
+			padding-right: 7px;
+
+		}
 	}
+
+
+//form stylings
+
+	form {
+		padding: 0px 18px 0 0;
+		margin: 0 auto;
+		// padding: 0 18px;
+
+		// @media all and (min-width: 768px) {
+		//
+		// }
+
+		input, textarea {
+			border: none;
+			display: block;
+			height:30px;
+			width: 100%;
+			margin: 20px 0;
+			padding: 0 7px;
+			color: black;  //is this right?
+
+			@media all and (max-width: 768px) {
+				width: 100%;
+			}
+
+			@media all and (min-width: 768px) {
+				width: 100%;
+				max-width: 450px;
+			}
+
+		}
+
+
+		textarea {
+			height: 109px;
+			text-align: left;
+			padding-top: 7px;
+			margin-bottom: 0;
+		}
+
+
+		button {
+			margin: 28px 0;
+			// margin-left: 270px;
+			float: right;
+			margin-right: -15px; //not sure why I need this to properly align right?
+			height: 40px;
+			width: 99px;
+			color: $contacts-value;
+			background-color: $white;
+			border: none;
+
+			@media all and (min-width: 768px) {
+				margin-left: 320px;
+				float: right;
+			}
+		}
+	}
+
+
 
 	&__bar {
 		background-color: $footer-bottom-border;
@@ -45,6 +129,12 @@ $block: 'st-footer';
 		height: 30px;
 		// position: absolute;
 		// bottom: 0;
+		span {
+			color: $copywrite;
+			padding-left: 20px;
+			font-size: 10px;
+			font-weight: normal;
+		}
 	}
 
 
