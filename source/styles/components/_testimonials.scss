@@ -7,7 +7,46 @@ $block: 'st-testimonials';
 .#{$block} {
 background-color: $testimonial;
 padding: 20px 20px;
+position: relative;
 
+	// @media screen and (min-width: 768px) {
+	// 	border-top: $white solid 1px;
+	// }
+
+	//The below handles the little "slit" of green or blue on the left of testemonials
+	//when in mobile view
+	@media screen and (max-width: 768px) {
+		margin-left: 5px;
+
+		&:before {
+			content: '';
+			height: 100%;
+			position: absolute;
+			top: 0px;
+			left: -999px;
+			right: -999px;
+			z-index: -1;
+			// border-bottom: $white solid 1px;
+		}
+
+		&:nth-of-type(2):before{
+			background-color: $services-dark-blue;
+		}
+		&:nth-of-type(4):before{
+			background-color: $services-light-green;
+		}
+	}
+
+	//This puts a bottom border on both testemonial containers
+	&:after {
+		content: '';
+		border-bottom: $white solid 1px;
+		z-index: 99999;
+		position: absolute;
+		left: -999px;
+		right: -999px;
+		bottom: 0;
+	}
 
 	&__text {
 		display: block;

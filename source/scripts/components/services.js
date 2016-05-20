@@ -28,6 +28,8 @@ $( document ).ready(function () {
 
 	//expand and collapse all business services at once.
 	$('.st-services__tab-main').on('click', function () {
+		//this adds active class to main service dropdown + hides and removes the extra dark bar when the main tab is not expanded
+		$(this).closest('.st-services').find('#st-services__bottom-bar').toggleClass('st-services__bottom-bar');
 		$(this).toggleClass('st-services__tab-main--active');
 	});
 });

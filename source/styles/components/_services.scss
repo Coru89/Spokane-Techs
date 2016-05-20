@@ -5,15 +5,32 @@ $block: 'st-services';
 .#{$block} {
 	padding: 0px 15px;
 	overflow-x: hidden;
+	border-bottom: $white solid 1px;
+	// z-index: 9999;
+
+	//@media screen and (min-width: 768px) {
+
+		// margin-bottom: -1px;
+	//}
 
 	& h2 {
 		font-weight: $font-weight-light;
 		font-size: 18px;
 		padding: 30px;
-		margin:0;
+		margin: 0;
+		position: relative;
+
+		//this puts borders below both H2
+		&:before {
+			content: '';
+			position: absolute;
+			border-bottom: $white solid 1px;
+			bottom: 0;
+			left: -999px;
+			right: -999px;
+		}
 
 		& strong {
-
 			font-weight: $font-weight-bold;
 		}
 	}
@@ -37,7 +54,7 @@ $block: 'st-services';
 	@media screen and (min-width: 768px) {
 		.grid__row:last-of-type {
 			> .st-services__tab:before {
-				border-style: hidden;
+				border-bottom-style: hidden;
 			}
 		}
 	}
@@ -47,7 +64,7 @@ $block: 'st-services';
 	@media screen and (max-width: 768px) {
 		.grid__row:last-of-type {
 			> .st-services__tab:nth-of-type(2):before {
-				border-style: hidden;
+				border-bottom-style: hidden;
 			}
 		}
 	}
@@ -64,9 +81,8 @@ $block: 'st-services';
 			&:before {
 				position: absolute;
 				content: '';
-				border-bottom: rgb(255, 255, 255) solid 1px;
+				border-bottom: $white solid 1px;
 				border-bottom: rgba(255, 255, 255, 0.2) solid 1px;
-				opacity: 20%;
 				bottom: 0px;
 				width: 94%;
 
@@ -87,6 +103,12 @@ $block: 'st-services';
 			}
 		}
 
+		&:last-of-type {
+			&:before{
+				border:none;
+			}
+		}
+
 
 
 		&:after {
@@ -104,14 +126,19 @@ $block: 'st-services';
 	}
 
 		&-main {
+
 			border-bottom: 1px solid $white;
-			border-top: 1px solid $white;
 			font-size: 18px;
 			font-weight: $font-weight-bold;
 			margin: 0 -15px;
 			padding: 9px 15px;
 			position: relative;
 			text-align: center;
+
+
+			// @media screen and (max-width: 768px) {
+			// 	border-bottom: 0;
+			// }
 
 
 
@@ -145,6 +172,7 @@ $block: 'st-services';
 
 
 			&--active {
+				border-bottom: 1px solid $white;
 
 				&:after {
 					background-image: url('../images/arrow-active.png');
@@ -202,9 +230,7 @@ $block: 'st-services';
 			}
 			@media all and (min-width: 768px) {
 
-
 				h3 {
-
 					background: none;
 					text-decoration:underline;
 				}
@@ -213,7 +239,6 @@ $block: 'st-services';
 			h3 {
 				font-weight: 600;
 			}
-
 
 			& ~ .st-services__item-content {
 				position: relative;
@@ -258,5 +283,13 @@ $block: 'st-services';
 				display: none;
 			}
 		}
+	}
+
+	&__bottom-bar {
+		height: 28px;
+		width: 100%;
+		//this is strange...it works though. Okay?
+		// margin-left: -15px;
+		// padding-right: 30px;
 	}
 }
