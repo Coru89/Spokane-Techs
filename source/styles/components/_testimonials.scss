@@ -6,9 +6,12 @@ $block: 'st-testimonials';
 
 .#{$block} {
 background-color: $testimonial;
+
 padding: 20px;
 position: relative;
-// display: table;
+display: table;
+width: 100%;
+box-sizing: border-box;
 
 	//The below handles the little "slit" of green or blue on the left of testemonials
 	//when in mobile view
@@ -23,7 +26,7 @@ position: relative;
 			left: -999px;
 			right: -999px;
 			z-index: -1;
-			// border-bottom: $white solid 1px;
+			border-bottom: $white solid 1px;
 		}
 
 		&:nth-of-type(2):before{
@@ -46,41 +49,58 @@ position: relative;
 	}
 
 	&__text {
-		display: block;
-		width: 100%;
-		padding-right: 15px;
+		display: table-cell;
 		position: relative;
 		font-weight: lighter;
 		font-size: 14px;
 
-		// @media screen and (max-width: 768px) {
-		// }
-		//
-		// @media screen and (min-width: 768px) {
-		// }
+		@media screen and (min-width: 768px) {
+			width: 50%;
+		}
+
+		&:nth-of-type(1){
+			padding-right: 20px;
+		}
 
 
 		&--hidden {
 			border-left: $formtext solid 1px;
 			padding-left: 20px;
+			// font-size: 40px;
+
 			@media screen and (max-width: 768px) {
 				display: none;
+			}
+
+			em {
+				text-align: left !important;
 			}
 		}
 	}
 
 	&__name {
-
-		padding-top: 20px;
 		display: block;
 		text-align: right;
 		color: $testimonials-name;
-		font-size: 12px;
+		font-size: 12px
 	}
 
 	& em {
-		// padding-bottom: 20px;
+		padding-bottom: 20px;
 		display: block;
+		min-height: 39px;
+		width: 100%;
+		text-align: center;
+
+
+
+		// &:nth-of-type(1){
+		// 	text-align: right;
+		// }
+
+		@media screen and (min-width: 768px) {
+		text-align: right;
+		}
 	}
 
 }
