@@ -6,12 +6,9 @@ $block: 'st-testimonials';
 
 .#{$block} {
 background-color: $testimonial;
-padding: 20px 20px;
+padding: 20px;
 position: relative;
-
-	// @media screen and (min-width: 768px) {
-	// 	border-top: $white solid 1px;
-	// }
+// display: table;
 
 	//The below handles the little "slit" of green or blue on the left of testemonials
 	//when in mobile view
@@ -56,16 +53,16 @@ position: relative;
 		font-weight: lighter;
 		font-size: 14px;
 
-		@media screen and (max-width: 768px) {
-
-		}
-
-		@media screen and (min-width: 768px) {
-
-		}
+		// @media screen and (max-width: 768px) {
+		// }
+		//
+		// @media screen and (min-width: 768px) {
+		// }
 
 
 		&--hidden {
+			border-left: $formtext solid 1px;
+			padding-left: 20px;
 			@media screen and (max-width: 768px) {
 				display: none;
 			}
@@ -78,6 +75,7 @@ position: relative;
 		display: block;
 		text-align: right;
 		color: $testimonials-name;
+		font-size: 12px;
 	}
 
 	& em {

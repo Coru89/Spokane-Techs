@@ -16,9 +16,22 @@ $block: 'st-services';
 	& h2 {
 		font-weight: $font-weight-light;
 		font-size: 18px;
-		padding: 30px;
+		padding: 15px 5px 15px 5px;
 		margin: 0;
 		position: relative;
+		text-align: center;
+
+		@media screen and (min-width: 768px) {
+			font-size: 22px;
+			padding-top: 26px;
+			padding-bottom: 32px;
+		}
+
+		@media screen and (min-width: 1024px) {
+			font-size: 28px;
+			padding-top: 39px;
+			padding-bottom: 54px;
+		}
 
 		//this puts borders below both H2
 		&:before {
@@ -129,6 +142,8 @@ $block: 'st-services';
 
 			border-bottom: 1px solid $white;
 			font-size: 18px;
+			// font-size: 4.0vmin;
+			// font-size: 8vmax;
 			font-weight: $font-weight-bold;
 			margin: 0 -15px;
 			padding: 9px 15px;
@@ -136,9 +151,13 @@ $block: 'st-services';
 			text-align: center;
 
 
-			// @media screen and (max-width: 768px) {
-			// 	border-bottom: 0;
-			// }
+			@media screen and (min-width: 768px) {
+				font-size: 20px;
+			}
+
+			@media screen and (min-width: 1024px) {
+				font-size: 24px;
+			}
 
 
 
@@ -165,11 +184,7 @@ $block: 'st-services';
 				@media screen and (min-width: 768px) {
 
 				}
-
-
 			}
-
-
 
 			&--active {
 				border-bottom: 1px solid $white;
@@ -195,6 +210,7 @@ $block: 'st-services';
 
 	&__item {
 		position: relative;
+		font-size: 14px;
 			// max-width: 344px;
 
 		& > * {    //this means target all children
@@ -208,7 +224,6 @@ $block: 'st-services';
 			&:before {
 				margin-top: -1px;
 			}
-
 		}
 
 		&:after {
@@ -255,8 +270,6 @@ $block: 'st-services';
 					position: absolute;
 					top: 0;
 				    bottom: 0;
-					// left: -7.5px;
-					// right:-7.5px;
 				    left: -9999px;
 				    right: -9999px;
 				}
@@ -275,7 +288,6 @@ $block: 'st-services';
 
 	&__hidden {
 		display: none;
-		// background-color: $services-bg;
 
 		&--md {
 			margin-right: 30px;
@@ -288,8 +300,5 @@ $block: 'st-services';
 	&__bottom-bar {
 		height: 28px;
 		width: 100%;
-		//this is strange...it works though. Okay?
-		// margin-left: -15px;
-		// padding-right: 30px;
 	}
 }
