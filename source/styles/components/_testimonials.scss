@@ -6,17 +6,17 @@ $block: 'st-testimonials';
 
 .#{$block} {
 background-color: $testimonial;
-
-padding: 20px;
 position: relative;
+box-sizing: border-box;
+padding: 20px;
 display: table;
 width: 100%;
-box-sizing: border-box;
 
 	//The below handles the little "slit" of green or blue on the left of testemonials
 	//when in mobile view
 	@media screen and (max-width: 768px) {
 		margin-left: 5px;
+		padding-right: 25px;
 
 		&:before {
 			content: '';
@@ -48,25 +48,24 @@ box-sizing: border-box;
 		bottom: 0;
 	}
 
-	&__text {
+	&__section {
 		display: table-cell;
-		position: relative;
-		font-weight: lighter;
-		font-size: 14px;
 
 		@media screen and (min-width: 768px) {
 			width: 50%;
+			text-align: left;
+
+			&:not(.st-testimonials__section--hidden) {
+				padding-right: 20px;
+			}
 		}
 
-		&:nth-of-type(1){
-			padding-right: 20px;
-		}
+
 
 
 		&--hidden {
 			border-left: $formtext solid 1px;
 			padding-left: 20px;
-			// font-size: 40px;
 
 			@media screen and (max-width: 768px) {
 				display: none;
@@ -74,6 +73,28 @@ box-sizing: border-box;
 
 			em {
 				text-align: left !important;
+			}
+		}
+	}
+
+	&__text {
+		position: relative;
+		font-weight: lighter;
+		font-size: 14px;
+
+
+		@media screen and (min-width: 768px) {
+			max-width: 340px;
+
+			&-left {
+				position: absolute;
+				right: 50%;
+				margin-right: 20px;
+
+				& em {
+					padding-right: 40px;
+				}
+
 			}
 		}
 	}
@@ -89,18 +110,10 @@ box-sizing: border-box;
 		padding-bottom: 20px;
 		display: block;
 		min-height: 39px;
-		width: 100%;
-		text-align: center;
 
-
-
-		// &:nth-of-type(1){
-		// 	text-align: right;
+		// @media screen and (min-width: 768px) {
+		// text-align: right;
 		// }
-
-		@media screen and (min-width: 768px) {
-		text-align: right;
-		}
 	}
 
 }
