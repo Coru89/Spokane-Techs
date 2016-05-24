@@ -41,7 +41,7 @@ $block: 'st-header';
 	}
 
 	&__contact {
-		color: white;
+		color: $white;
 		position: absolute;
 		left:15px;
 		bottom: 15px;
@@ -59,8 +59,14 @@ $block: 'st-header';
 			display: inline-block;
 			padding: 7px;
 			padding-left: 33px;
+			border: 1px solid rgb(255, 255, 255);
 			border: 1px solid rgba(255, 255, 255, 0.8);
+			background-color: rgba(50, 50, 50);
 			background-color: rgba(50, 50, 50, 0.6);
+
+			a {
+			color: $white;
+			}
 
 			&:before {
 				background-repeat: no-repeat;

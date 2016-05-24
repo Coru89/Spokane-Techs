@@ -1,0 +1,114 @@
+
+{
+	"contact": {
+			"email": "help@spokanetechs.com",
+			"phone": "(509)499 - 4937"
+		},
+
+	"testemonials": [
+		{
+			"id": 1,
+			"name": "Guy",
+			"quote": "pooI recently had a visit with Mario Diaz, of your company, to help me with my computer which I had been having problems with since I installed Windows 10, and I was very impressed with this young man's demeanor, expertise , skill and personality. Mario helped me a great deal and I would refer him to anyone who asked. I am a senior citizen in a retirement home, living on a fixed income, and he was most generous and I think he should have charged me more, but, again, he was very kind. We need more people in the world like Mario. Thank you so much!"
+		},
+		{
+			"id": 2,
+			"name": "Guy",
+			"quote": "some text here"
+		},
+		{
+			"id": 3,
+			"name": "Guy",
+			"quote": "some text here"
+		},
+		{
+			"id": 4,
+			"name": "Guy",
+			"quote": "some text here"
+		}
+	],
+
+	"business": {
+		"menu-title": "wtf",
+		"header-text": "sup",
+		"services": [
+			{
+				"set": 1,
+				"servicepair" : [
+					{
+						"servicename": "la lal lal a",
+						"description": "bill"
+					},
+					{
+						"servicename": "wut",
+						"description": "bill"
+					}
+				]
+			},
+			{
+				"set": 2,
+				"servicepair" : [
+					{
+						"servicename": "hi",
+						"description": "bill"
+					},
+					{
+						"servicename": "poop",
+						"description": "bill"
+					}
+				]
+			},
+			{
+				"set": 3,
+				"servicepair" : [
+					{
+						"servicename": "gee whilkers",
+						"description": "wow!"
+					}
+				]
+			}
+		]
+	},
+
+	"residential": {
+		"menu-title": "wtf",
+		"header-text": "sup",
+		"services": [
+			{
+				"set": 1,
+				"servicepair" : [
+					{
+						"servicename": "la lal lal a",
+						"description": "bill"
+					},
+					{
+						"servicename": "wut",
+						"description": "bill"
+					}
+				]
+			},
+			{
+				"set": 2,
+				"servicepair" : [
+					{
+						"servicename": "hi",
+						"description": "bill"
+					},
+					{
+						"servicename": "poop",
+						"description": "bill"
+					}
+				]
+			},
+			{
+				"set": 3,
+				"servicepair" : [
+					{
+						"servicename": "gee whilkers",
+						"description": "wow!"
+					}
+				]
+			}
+		]
+	}
+}

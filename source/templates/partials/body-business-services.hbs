@@ -1,76 +1,23 @@
 <div class="st-services st-services__business">
-	<h2><strong>Professional computer repair</strong> and <stong>network support</strong> at your Spokane <strong>business</strong> or <strong>home office</strong>.</h2>
-	<div class="st-services__tab-main" type="tab" name="tab">Buisness Services</div>
+	<h2>{{{company.business.header-text}}}</h2>
+	<div class="st-services__tab-main" type="tab" name="tab">{{company.business.menu-title}}</div>
 	<div class="st-services__content-box">
 		<div class="grid__row">
 			<div class="grid__100">
-				<div class="grid__row">
-					<div class="grid__100-50 st-services__tab st-services__item">
-						<h3>Data Services</h3>
-						<p class="st-services__hidden st-services__hidden--md">Suddenly playing with yourself is a scholarly pursuit? I don't want no part of yo tight-ass country club, ya freak bitch! Stack the chafing dishes outside by the mailbox. I'm on the job. Well, I hope you also carry a spare bowl of candy beans.</p>
+				{{#each company.business.services}}
+					<div class="grid__row">
+						{{#each servicepair}}
+							<div class="grid__100-50 st-services__tab st-services__item">
+								<h3>{{servicename}}</h3>
+								<p class="st-services__hidden st-services__hidden--md">{{description}}</p>
+							</div>
+						{{/each}}
+						<div class="grid__100 st-services__item st-services__item-content">
+							<p class="test">placeholder text</p>
+						</div>
 					</div>
-					<div class="grid__100-50 st-services__tab st-services__item">
-						<h3>Network Storage Solutions</h3>
-						<p class="st-services__hidden st-services__hidden--md">I know what an erection feels like, Michael. No, it's the opposite. It's like my heart is getting hard. I want to cry so bad, but I don't think I can spare the moisture.</p>
-					</div>
-					<div class="grid__100 st-services__item st-services__item-content">
-						<p class="test">placeholder text 1</p>
-					</div>
-				</div>
-				<div class="grid__row">
-					<div class="grid__100-50 st-services__tab st-services__item">
-						<h3>PC Upgrades</h3>
-						<p class="st-services__hidden st-services__hidden--md">No! These are just strippers! Look how hot they are! Did you know that more frozen bananas are sold right here on this boardwalk than anywhere in the OC? If you didn't have adult onset diabetes, I wouldn't mind giving you a little sugar. </p>
-					</div>
-					<div class="grid__100-50 st-services__tab st-services__item">
-						<h3>service name</h3>
-						<p class="st-services__hidden st-services__hidden--md">Yeah, like anyone would want to R her. You must teach me the ways of the secular flesh. Dad would stage elaborate situations using a one-armed man to teach us lessons.</p>
-					</div>
-					<div class="grid__100 st-services__item st-services__item-content">
-						<p>placeholder text 2</p>
-					</div>
-				</div>
-				<div class="grid__row">
-					<div class="grid__100-50 st-services__tab st-services__item">
-						<h3>service name</h3>
-						<p class="st-services__hidden st-services__hidden--md">Suddenly playing with yourself is a scholarly pursuit? I don't want no part of yo tight-ass country club, ya freak bitch! Stack the chafing dishes outside by the mailbox. I'm on the job. Well, I hope you also carry a spare bowl of candy beans.</p>
-					</div>
-					<div class="grid__100-50 st-services__tab st-services__item">
-						<h3>service name</h3>
-						<p class="st-services__hidden st-services__hidden--md">I know what an erection feels like, Michael. No, it's the opposite. It's like my heart is getting hard. I want to cry so bad, but I don't think I can spare the moisture.</p>
-					</div>
-					<div class="grid__100 st-services__item st-services__item-content">
-						<p class="test">placeholder text 1</p>
-					</div>
-				</div>
-				<div class="grid__row">
-					<div class="grid__100-50 st-services__tab st-services__item">
-						<h3>service name</h3>
-						<p class="st-services__hidden st-services__hidden--md">No! These are just strippers! Look how hot they are! Did you know that more frozen bananas are sold right here on this boardwalk than anywhere in the OC? If you didn't have adult onset diabetes, I wouldn't mind giving you a little sugar. </p>
-					</div>
-					<div class="grid__100-50 st-services__tab st-services__item">
-						<h3>service name</h3>
-						<p class="st-services__hidden st-services__hidden--md">Yeah, like anyone would want to R her. You must teach me the ways of the secular flesh. Dad would stage elaborate situations using a one-armed man to teach us lessons.</p>
-					</div>
-					<div class="grid__100 st-services__item st-services__item-content">
-						<p>placeholder text 2</p>
-					</div>
-				</div>
-				<div class="grid__row">
-					<div class="grid__100-50 st-services__tab st-services__item">
-						<h3>service name</h3>
-						<p class="st-services__hidden st-services__hidden--md">Suddenly playing with yourself is a scholarly pursuit? I don't want no part of yo tight-ass country club, ya freak bitch! Stack the chafing dishes outside by the mailbox. I'm on the job. Well, I hope you also carry a spare bowl of candy beans.</p>
-					</div>
-					<div class="grid__100-50 st-services__tab st-services__item">
-						<h3>service name</h3>
-						<p class="st-services__hidden st-services__hidden--md">I know what an erection feels like, Michael. No, it's the opposite. It's like my heart is getting hard. I want to cry so bad, but I don't think I can spare the moisture.</p>
-					</div>
-					<div class="grid__100 st-services__item st-services__item-content">
-						<p class="test">placeholder text 1</p>
-					</div>
-				</div>
+				{{/each}}
 			</div>
-
 		</div>
 	</div>
 	<div id="st-services__bottom-bar" class="st-services__bottom-bar"></div>
