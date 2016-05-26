@@ -86,11 +86,11 @@ $block: 'st-footer';
 			@media all and (min-width: 768px) {
 				width: 100%;
 				max-width: 450px;
-			}
-		}
 
-		input:first-of-type {
-			margin-top: 0;
+				&:first-of-type {
+					margin-top: 0;
+				}
+			}
 		}
 
 		textarea {
