@@ -6,7 +6,6 @@ $block: 'st-header';
 
 .#{$block} {
 
-
 	&__image {
 		background-image: url('/images/spokane.png');
 		background-size: cover;
@@ -19,13 +18,12 @@ $block: 'st-header';
 		border-bottom: 1px solid $white;
 
 		@media all and (min-width: 500px) {
-			min-height:240px
+			min-height: 240px;
 		}
 
 		@media all and (min-width: 768px) {
-			min-height:330px
+			min-height: 330px;
 		}
-
 	}
 
 	&__logo {
@@ -41,10 +39,17 @@ $block: 'st-header';
 	}
 
 	&__contact {
-		color: $white;
 		position: absolute;
 		left:15px;
 		bottom: 15px;
+
+		a {
+		color: $white;
+		}
+
+		@media all and (min-width: 500px) {
+			bottom: 100px;
+		}
 
 		@media all and (min-width: 768px) {
 			top: 20px;
@@ -59,14 +64,10 @@ $block: 'st-header';
 			display: inline-block;
 			padding: 7px;
 			padding-left: 33px;
-			border: 1px solid rgb(255, 255, 255);
+			border: 1px solid $white;
 			border: 1px solid rgba(255, 255, 255, 0.8);
-			background-color: rgba(50, 50, 50);
+			background-color: $grey-icon-fill;
 			background-color: rgba(50, 50, 50, 0.6);
-
-			a {
-			color: $white;
-			}
 
 			&:before {
 				background-repeat: no-repeat;
@@ -81,29 +82,26 @@ $block: 'st-header';
 		}
 
 		&-phone {
+			margin-right: 15px;
+
+			@media all and (min-width: 500px) {
+				margin-right: 37px;
+			}
+			@media all and (min-width: 768px) {
+				margin-right: 17px;
+			}
+
 			&:before {
 				background-image: url('/images/old-phone.png');
 			}
 		}
 
 		&-email {
-			margin-right: 15px;  //margins dont collapse between email and phone
+			margin-right: 15px;
 
 			&:before {
 				background-image: url('/images/mail.png');
 			}
 		}
-	}
-
-
-	&__span {
-		color: yellow;
-	}
-
-	&--modifier {
-	}
-
-	p {
-		color: green;
 	}
 }

@@ -6,12 +6,6 @@ $block: 'st-services';
 	padding: 0px 15px;
 	overflow-x: hidden;
 	border-bottom: $white solid 1px;
-	// z-index: 9999;
-
-	//@media screen and (min-width: 768px) {
-
-		// margin-bottom: -1px;
-	//}
 
 	& h2 {
 		font-weight: $font-weight-light;
@@ -55,13 +49,11 @@ $block: 'st-services';
 		@media screen and (min-width: 768px) {
 			font-size: 16px;
 		}
-
 	}
 
 	&__content-box {
 		display: none;
 	}
-
 
 //this hides the last TWO bottom borders on .st-services__tab:before psuedo class when in tablet + desktop state
 	@media screen and (min-width: 768px) {
@@ -71,7 +63,6 @@ $block: 'st-services';
 			}
 		}
 	}
-
 
 //this hides the last bottom border on .st-services__tab:before psuedo class when in mobile state
 	@media screen and (max-width: 768px) {
@@ -86,7 +77,6 @@ $block: 'st-services';
 		position: relative;
 		display: block;
 
-
 		@media screen and (min-width: 768px) {
 			max-width: 344px;
 			margin: 0 12.5px;
@@ -98,7 +88,6 @@ $block: 'st-services';
 				border-bottom: rgba(255, 255, 255, 0.2) solid 1px;
 				bottom: 0px;
 				width: 94%;
-
 			}
 		}
 
@@ -107,12 +96,11 @@ $block: 'st-services';
 			&:before {
 				position: absolute;
 				content: '';
-				border-bottom: rgb(255, 255, 255) solid 1px;
+				border-bottom: $white solid 1px;
 				border-bottom: rgba(255, 255, 255, 0.2) solid 1px;
 				right: -9999px;
 				left: -9999px;
 				bottom: 0px;
-
 			}
 		}
 
@@ -122,15 +110,13 @@ $block: 'st-services';
 			}
 		}
 
-
-
 		&:after {
 		background-image: url('/images/arrow.png');
 		background-repeat: no-repeat;
 		content: '';
 		position: absolute;
-		width: 11px;
-		height: 7px;
+		width: 13px;
+		height: 8px;
 		background-repeat: no-repeat;
 		position: absolute;
 		right: 12.5px;
@@ -142,14 +128,11 @@ $block: 'st-services';
 
 			border-bottom: 1px solid $white;
 			font-size: 18px;
-			// font-size: 4.0vmin;
-			// font-size: 8vmax;
 			font-weight: $font-weight-bold;
 			margin: 0 -15px;
 			padding: 9px 15px;
 			position: relative;
 			text-align: center;
-
 
 			@media screen and (min-width: 768px) {
 				font-size: 20px;
@@ -159,15 +142,13 @@ $block: 'st-services';
 				font-size: 24px;
 			}
 
-
-
 			&:after{
 				background-image: url('../images/arrow.png');
 				background-repeat: no-repeat;
 				content: '';
 				position: absolute;
-				width: 11px;
-				height: 7px;
+				width: 13px;
+				height: 8px;
 				background-repeat: no-repeat;
 				display: inline-block;
 				vertical-align: middle;
@@ -175,14 +156,9 @@ $block: 'st-services';
 				top: 50%;
 				margin: -3.5px 0 0 10px;
 
-
 				@media screen and (max-width: 768px) {
 					right: 20px;
 					top: 50%;
-				}
-
-				@media screen and (min-width: 768px) {
-
 				}
 			}
 
@@ -200,18 +176,14 @@ $block: 'st-services';
 						max-width: 741px;
 						margin: 0 auto;
 					}
-
 				}
 			}
-
-
 		}
 	}
 
 	&__item {
 		position: relative;
 		font-size: 14px;
-			// max-width: 344px;
 
 		& > * {    //this means target all children
 			position: relative;
@@ -222,7 +194,11 @@ $block: 'st-services';
 			display: none;
 
 			&:before {
-				margin-top: -1px;
+				margin-top: -5px; //needed to do this to hide border when item is active
+			}
+
+			p {
+				bottom: 2.5px; //this re-centers text which after adjusting the margin above
 			}
 		}
 
@@ -243,6 +219,7 @@ $block: 'st-services';
 					left:-7.5px;
 				}
 			}
+
 			@media all and (min-width: 768px) {
 
 				h3 {
@@ -253,16 +230,20 @@ $block: 'st-services';
 
 			h3 {
 				font-weight: 600;
+				margin-top: 20px;
 			}
 
 			& ~ .st-services__item-content {
 				position: relative;
 
+				p {
+					margin: auto;
+					padding: 22px 0;
+				}
 
 				& > * {
 					position:relative;
 					z-index: 100;
-
 				}
 
 				&:before {  //this is kind of a fucked up way to fix margins ***not showing placeholder text
@@ -277,7 +258,6 @@ $block: 'st-services';
 				@media all and (min-width: 768px) {
 					display: block;
 				}
-
 			}
 
 			&:after {
@@ -291,6 +271,7 @@ $block: 'st-services';
 
 		&--md {
 			margin-right: 30px;
+			margin-bottom: 22px;
 			@media all and (min-width: 768px) {
 				display: none;
 			}

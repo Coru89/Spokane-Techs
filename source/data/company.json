@@ -8,40 +8,40 @@
 	"testemonials": [
 		{
 			"id": 1,
-			"name": "Guy",
-			"quote": "pooI recently had a visit with Mario Diaz, of your company, to help me with my computer which I had been having problems with since I installed Windows 10, and I was very impressed with this young man's demeanor, expertise , skill and personality. Mario helped me a great deal and I would refer him to anyone who asked. I am a senior citizen in a retirement home, living on a fixed income, and he was most generous and I think he should have charged me more, but, again, he was very kind. We need more people in the world like Mario. Thank you so much!"
+			"name": "Barbara Fifield",
+			"quote": "I recently had a visit with Mario Diaz, of your company, to help me with my computer which I had been having problems with since I installed Windows 10, and I was very impressed with this young man's demeanor, expertise , skill and personality. Mario helped me a great deal and I would refer him to anyone who asked. I am a senior citizen in a retirement home, living on a fixed income, and he was most generous and I think he should have charged me more, but, again, he was very kind. We need more people in the world like Mario. Thank you so much!"
 		},
 		{
 			"id": 2,
-			"name": "Guy",
-			"quote": "some text here"
+			"name": "Josh Myers",
+			"quote": "Great and Quick service, Very Professional...would recommend any time. =D"
 		},
 		{
 			"id": 3,
-			"name": "Guy",
-			"quote": "some text here"
+			"name": "Allen Johnson",
+			"quote": "They have quickly knocked out numerous issues for me on a custom built desktop I own."
 		},
 		{
 			"id": 4,
-			"name": "Guy",
-			"quote": "some text here"
+			"name": "",
+			"quote": ""
 		}
 	],
 
 	"business": {
-		"menu-title": "wtf",
-		"header-text": "sup",
+		"menu-title": "Business Services",
+		"header-text": "Spokane Techs offers professional computer repair and network support at your business or home office",
 		"services": [
 			{
 				"set": 1,
 				"servicepair" : [
 					{
-						"servicename": "la lal lal a",
-						"description": "bill"
+						"servicename": "Computer Virus/Malware removal",
+						"description": "Virus removal and malware prevention. We thoroughly clean your computers and network of malicious software that could harm your pc's and/or business."
 					},
 					{
-						"servicename": "wut",
-						"description": "bill"
+						"servicename": "PC optimization",
+						"description": "Slow computer's are often caused by junk we pick up everyday while we use them, Spokane Techs will clean out the clutter on your PC so that it can run to its full potential again."
 					}
 				]
 			},
@@ -49,12 +49,12 @@
 				"set": 2,
 				"servicepair" : [
 					{
-						"servicename": "hi",
-						"description": "bill"
+						"servicename": "Data Recovery",
+						"description": "We recover data from laptop and desktop hard drives. If your computer is no longer working we can often recovery your data and move it to another working computer."
 					},
 					{
-						"servicename": "poop",
-						"description": "bill"
+						"servicename": "Network Storage Solutions",
+						"description": "We offer network storage solutions such as NAS / Servers / Cloud setups for easy file access between all of your employees."
 					}
 				]
 			},
@@ -62,8 +62,48 @@
 				"set": 3,
 				"servicepair" : [
 					{
-						"servicename": "gee whilkers",
-						"description": "wow!"
+						"servicename": "PC upgrades",
+						"description": "We offer hardware upgrades to speed up your current pc as well as replacement computers if need be."
+					},
+					{
+						"servicename": "Network Setups",
+						"description": "We will install your needed hardware such as switches, firewalls, wireless access points, and cables"
+					}
+				]
+			},
+			{
+				"set": 4,
+				"servicepair": [
+					{
+						"servicename": "Printer Installations",
+						"description": "We install and configure new printers for your business network or desktop PC."
+					},
+					{
+						"servicename": "Operating system re-installation",
+						"description": "OS installations Linux / Windows. Mac offered off site."
+					}
+
+				]
+			},
+			{
+				"set":5,
+				"servicepair": [
+					{
+						"servicename": "Hard Drive Cloning",
+						"description": "We are able to clone your hard drive data to a new drive if you are looking to upgrade or change your hard drive"
+					},
+					{
+						"servicename": "Custom Built Computers",
+						"description": "We offer top of the line custom built computers for aggressive prices. Have a quick and responsive PC for all of your office needs."
+					}
+				]
+			},
+			{
+				"set": 6,
+				"servicepair": [
+					{
+						"servicename": "PC Diagnosis",
+						"description": "We offer quick and accurate diagnosis of your computer if it is not working correctly."
 					}
 				]
 			}
@@ -71,19 +111,19 @@
 	},
 
 	"residential": {
-		"menu-title": "wtf",
-		"header-text": "sup",
+		"menu-title": "Residential",
+		"header-text": "Spokane Techs offers professional in-home PC repair, WiFi support, PC speed up, printer help, and virus removals at an affordable price.",
 		"services": [
 			{
 				"set": 1,
 				"servicepair" : [
 					{
-						"servicename": "la lal lal a",
-						"description": "bill"
+						"servicename": "PC Virus/Malware removal",
+						"description": "Computer virus removal and malware prevention. We thoroughly clean your computer of malicious software that could possibly harm you or your computer."
 					},
 					{
-						"servicename": "wut",
-						"description": "bill"
+						"servicename": "PC optimization",
+						"description": "PC's pick up junk everyday while we use them, Spokane Techs will clean out the clutter on your PC so that it can run to its full potential again."
 					}
 				]
 			},
@@ -91,12 +131,12 @@
 				"set": 2,
 				"servicepair" : [
 					{
-						"servicename": "hi",
-						"description": "bill"
+						"servicename": "Data Recovery",
+						"description": "We recover data from laptop and desktop hard drives. If your computer is no longer working we can often recovery your data and move it to another working computer."
 					},
 					{
-						"servicename": "poop",
-						"description": "bill"
+						"servicename": "Network Storage Solutions",
+						"description": "We offer network storage solutions such as NAS / Servers / Cloud setups for easy file access between you and your friends/family."
 					}
 				]
 			},
@@ -104,8 +144,34 @@
 				"set": 3,
 				"servicepair" : [
 					{
-						"servicename": "gee whilkers",
-						"description": "wow!"
+						"servicename": "PC upgrades",
+						"description": "We offer hardware upgrades to your current pc as well as replacement computers if need be."
+					},
+					{
+						"servicename": "Printer Installations",
+						"description": "We install and configure printers on your wireless or wired network."
+					}
+				]
+			},
+			{
+				"set": 4,
+				"servicepair" : [
+					{
+						"servicename": "WiFi Setup",
+						"description": "WiFi setup, configuration and troubleshooting"
+					},
+					{
+						"servicename": "Operating System Installations",
+						"description": "If you want to upgrade or downgrade your operating system we are here to help"
+					}
+				]
+			},
+			{
+				"set": 5,
+				"servicepair" : [
+					{
+						"servicename": "PC Diagnosis",
+						"description": "Spokane techs offers quick and accurate diagnosis of your computer problems."
 					}
 				]
 			}

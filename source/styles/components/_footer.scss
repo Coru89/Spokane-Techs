@@ -3,16 +3,14 @@
 $block: 'st-footer';
 
 .#{$block} {
-	// background-color: $footer-main;
-	// width: 100%;
-	// height: 100%;
-	// margin: 10px 0;
-	// position: relative;
 
 	&__content {
 		background-color: $footer-main;
-		padding: 20px;
+		padding: 20px 20px 10px 20px;
 
+		@media all and (min-width: 768px) {
+			padding: 20px;
+		}
 	}
 
 	h2 {
@@ -27,23 +25,20 @@ $block: 'st-footer';
 			padding-top: 17px;
 			font-size: 28px;
 		}
-
 	}
 
 	&__logo {
 		background-image: url('/images/logo.png');
 		width: 300px;
 		height: 75px;
-		// margin-top: 30px;
 
-			@media all and (max-width: 768px) {
-				display: none;
-			}
+		@media all and (max-width: 768px) {
+			display: none;
+		}
 	}
 
 	&__contact {
 		font-size: 16px;
-		color: $contacts-value;
 		border-bottom: $contacts-border solid 1px;
 		padding-bottom: 20px;
 		margin: 0;
@@ -53,8 +48,9 @@ $block: 'st-footer';
 			padding-top: 40px;
 		}
 
-		&-value {
+		&-value a {
 			text-decoration: underline;
+			color: $contacts-value;
 		}
 
 		&-type {
@@ -69,6 +65,7 @@ $block: 'st-footer';
 		padding: 0px 18px 0 0;
 		margin: 0 auto;
 		position: relative;
+
 		@media all and (min-width: 1024px) {
 			padding-bottom: 79px;
 		}
@@ -90,9 +87,7 @@ $block: 'st-footer';
 				width: 100%;
 				max-width: 450px;
 			}
-
 		}
-
 
 		textarea {
 			height: 109px;
@@ -101,38 +96,32 @@ $block: 'st-footer';
 			margin-bottom: 0;
 		}
 
-
 		button {
-			margin: 28px 0 10px 0;
-			// margin-left: 270px;
+			margin: 12px -15px 10px 0; //not sure why I need -15px to properly align right?
 			float: right;
-			margin-right: -15px; //not sure why I need this to properly align right?
 			height: 40px;
 			width: 99px;
 			color: $formtext;
 			background-color: $white;
 			border: none;
 
+			@media all and (min-width: 768px) {
+				margin: 28px -15px 10px 0;
+			}
+
 			@media all and (min-width: 1024px) {
-				// margin-left: 320px;
-				// float: right;
 				margin: 28px 0 0 0;
 				position: absolute;
-
-				// top: 300px;
 				left: 365px;
 			}
 		}
 	}
-
-
 
 	&__bar {
 		background-color: $footer-bottom-border;
 		width: 100%;
 		height: 30px;
 		box-sizing: border-box;
-
 
 		span {
 			color: $copywrite;
@@ -143,7 +132,4 @@ $block: 'st-footer';
 			margin: 0;
 		}
 	}
-
-
-
 }

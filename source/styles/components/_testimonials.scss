@@ -2,21 +2,23 @@
 
 $block: 'st-testimonials';
 
-
-
 .#{$block} {
 background-color: $testimonial;
 position: relative;
-box-sizing: border-box;
-padding: 20px;
-display: table;
-width: 100%;
+
+	//this wrapper class is what is used to position the text correctly for testemonials
+	&__wrapper {
+		margin: 0 auto;
+		max-width: 800px;  //this is the width that aligns testemonials with menu items
+		display: table;
+		box-sizing: border-box;
+		padding: 20px;
+	}
 
 	//The below handles the little "slit" of green or blue on the left of testemonials
 	//when in mobile view
 	@media screen and (max-width: 768px) {
 		margin-left: 5px;
-		padding-right: 25px;
 
 		&:before {
 			content: '';
@@ -50,6 +52,8 @@ width: 100%;
 
 	&__section {
 		display: table-cell;
+		vertical-align: top;
+		position: relative;
 
 		@media screen and (min-width: 768px) {
 			width: 50%;
@@ -67,32 +71,21 @@ width: 100%;
 			@media screen and (max-width: 768px) {
 				display: none;
 			}
-
-			em {
-				text-align: left !important;
-			}
 		}
 	}
 
 	&__text {
-		position: relative;
 		font-weight: lighter;
 		font-size: 14px;
-
+		margin-top: auto;
+		vertical-align: top;
+		padding-bottom: 20px;
 
 		@media screen and (min-width: 768px) {
 			max-width: 340px;
 
 			&-left {
-				position: absolute;
-				right: 50%;
-				top: 20px;
 				margin-right: 20px;
-
-				& em {
-					padding-right: 40px;
-				}
-
 			}
 		}
 	}
@@ -101,7 +94,11 @@ width: 100%;
 		display: block;
 		text-align: right;
 		color: $testimonials-name;
-		font-size: 12px
+		font-size: 12px;
+		position: absolute;
+		bottom: 0;
+		right: 20px;
+		// margin-top: 20px;
 	}
 
 	& em {
