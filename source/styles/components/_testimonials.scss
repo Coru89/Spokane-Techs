@@ -9,7 +9,6 @@ position: relative;
 	//this wrapper class is what is used to position the text correctly for testemonials
 	&__wrapper {
 		margin: 0 auto;
-		max-width: 800px;  //this is the width that aligns testemonials with menu items
 		display: table;
 		box-sizing: border-box;
 		padding: 20px;
@@ -82,10 +81,12 @@ position: relative;
 		padding-bottom: 20px;
 
 		@media screen and (min-width: 768px) {
-			max-width: 340px;
 
 			&-left {
-				margin-right: 20px;
+
+				.st-testimonials__name {
+					right: 20px;
+				}
 			}
 		}
 	}
@@ -97,8 +98,8 @@ position: relative;
 		font-size: 12px;
 		position: absolute;
 		bottom: 0;
-		right: 20px;
-		// margin-top: 20px;
+		right: 0;
+		margin-top: 20px;
 	}
 
 	& em {

@@ -89,6 +89,10 @@ $block: 'st-footer';
 			}
 		}
 
+		input:first-of-type {
+			margin-top: 0;
+		}
+
 		textarea {
 			height: 109px;
 			text-align: left;

@@ -45,6 +45,7 @@ $block: 'st-services';
 	h3 {
 		font-weight: $font-weight-light;
 		font-size: 15px;
+		cursor: pointer;
 
 		@media screen and (min-width: 768px) {
 			font-size: 16px;
@@ -125,7 +126,6 @@ $block: 'st-services';
 	}
 
 		&-main {
-
 			border-bottom: 1px solid $white;
 			font-size: 18px;
 			font-weight: $font-weight-bold;
@@ -133,6 +133,7 @@ $block: 'st-services';
 			padding: 9px 15px;
 			position: relative;
 			text-align: center;
+			cursor: pointer;
 
 			@media screen and (min-width: 768px) {
 				font-size: 20px;
@@ -230,7 +231,7 @@ $block: 'st-services';
 
 			h3 {
 				font-weight: 600;
-				margin-top: 20px;
+
 			}
 
 			& ~ .st-services__item-content {
@@ -262,6 +263,7 @@ $block: 'st-services';
 
 			&:after {
 				background-image: url('/images/arrow-active.png');
+				top: 25px;
 			}
 		}
 	}
