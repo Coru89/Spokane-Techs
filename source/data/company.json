@@ -30,7 +30,7 @@
 
 	"business": {
 		"menu-title": "Business Services",
-		"header-text": "<em>Testing</em> buncha text n shit!",
+		"header-text": "<strong>Professional computer repair</strong> and <stong>network support at your Spokane <strong>business</strong> or <strong>home office</strong>.</stong>",
 		"services": [
 			{
 				"set": 1,
@@ -112,7 +112,7 @@
 
 	"residential": {
 		"menu-title": "Residential",
-		"header-text": "Spokane Techs offers professional in-home PC repair, WiFi support, PC speed up, printer help, and virus removals at an affordable price.",
+		"header-text": "<strong>Tech problems at home?</strong> PC repair, WiFi support, PC speed up, printer <strong>help</strong>, and virus removals at an affordable price.",
 		"services": [
 			{
 				"set": 1,
