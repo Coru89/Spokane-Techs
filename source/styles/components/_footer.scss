@@ -60,9 +60,8 @@ $block: 'st-footer';
 	}
 
 //form stylings
-
 	form {
-		padding: 0px 18px 0 0;
+		padding-right: 15px;
 		margin: 0 auto;
 		position: relative;
 
@@ -83,10 +82,8 @@ $block: 'st-footer';
 				width: 100%;
 			}
 
+			//first input on form needs to line up with logo
 			@media all and (min-width: 768px) {
-				width: 100%;
-				max-width: 450px;
-
 				&:first-of-type {
 					margin-top: 0;
 				}
@@ -111,12 +108,6 @@ $block: 'st-footer';
 
 			@media all and (min-width: 768px) {
 				margin: 28px -15px 10px 0;
-			}
-
-			@media all and (min-width: 1024px) {
-				margin: 28px 0 0 0;
-				position: absolute;
-				left: 365px;
 			}
 		}
 	}
