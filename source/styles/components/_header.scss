@@ -53,7 +53,7 @@ $block: 'st-header';
 
 		@media all and (min-width: 768px) {
 			top: 20px;
-			right: 20px;
+			right: 0;
 			left: auto;  //auto overwite the previous 15px above
 			bottom: auto;
 		}
