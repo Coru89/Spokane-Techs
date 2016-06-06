@@ -1,0 +1,92 @@
+@import '../reference/reference';
+
+$block: 'st-form';
+
+.#{$block} {
+
+	padding-right: 15px;
+	margin: 0 auto;
+	position: relative;
+
+	@media all and (min-width: 1024px) {
+		padding-bottom: 79px;
+	}
+
+	input, textarea {
+		border: none;
+		display: block;
+		height: 30px;
+		width: 100%;
+		margin: 20px 0;
+		padding: 0 7px;
+		color: $formtext;
+
+		@media all and (max-width: 768px) {
+			width: 100%;
+		}
+
+		//first input on form needs to line up with logo
+		@media all and (min-width: 768px) {
+			&:nth-of-type(2) {
+				margin-top: 0;
+			}
+		}
+
+		@media all and (max-width: 768px) {
+			&:nth-of-type(2) {
+				margin-top: 20px;
+			}
+		}
+	}
+
+	textarea {
+		height: 109px;
+		text-align: left;
+		padding-top: 7px;
+		margin-bottom: 0;
+		resize: vertical;
+	}
+
+	button {
+		margin: 12px -15px 10px 0; //not sure why I need -15px to properly align right?
+		float: right;
+		height: 40px;
+		width: 99px;
+		color: $formtext;
+		background-color: $white;
+		border: none;
+
+		@media all and (min-width: 768px) {
+			margin: 28px -15px 10px 0;
+		}
+	}
+
+	p {
+		display: none;
+		margin: 3px 0;
+		color: $contacts-type;
+		font-size: 15px;
+	}
+
+	&__error {
+
+		input, textarea {
+			border: red solid 2px;
+			margin-top: 0;
+
+			&:hover, &:focus {
+				border: red solid 2px;
+				outline: none;
+			}
+		}
+
+		p {
+			display: block;
+			@media all and (max-width: 768px) {
+				&:first-of-type {
+					margin-top: 20px;
+				}
+			}
+		}
+	}
+}

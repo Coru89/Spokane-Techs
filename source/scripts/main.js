@@ -2,7 +2,6 @@
  * main.js
  * Author: Corey Keller
  */
-
 (function () {
 	'use strict';
 
@@ -27,10 +26,12 @@
 			var content = $(this).children('.st-services__hidden--md').text();
 			$(this).siblings('.st-services__item-content').children('p').text(content);
 		});
-		//to-do: Contact Form Submission
 	});
 
+	//on form submit
 	$('.st-form__submit').on('click', function () {
+		$('.st-form__input-wrapper').removeClass('st-form__error');
+
 		if (validateForm()) {
 			// Collect values
 			// make ajax call
@@ -40,10 +41,8 @@
 
 	function validateForm() {
 		var formValid = true;
-
-		if (!validateGroup($('[data-form-type="group"]')) || !validateInputs($('[data-form-type="text"]'))) {
-			formValid = false;
-		}
+		formValid = validateGroup($('[data-form-type="group"]')) ? formValid : false;
+		formValid = validateInputs($('[data-form-type="text"]')) ? formValid : false;
 
 		return formValid;
 	}
@@ -52,13 +51,15 @@
 		var valid = false;
 
 		$group.each(function () {
-			if (this.value.length > 0) {
+			var inputValue = this.value;
+
+			if (inputValue.length !== 0 && /\S/.test(inputValue)) {
 				valid = true;
 			}
 		});
 
 		if (valid === false) {
-			$group.closest('.st-form__input-wrapper').addClass('TESTCLASS');
+			$group.closest('.st-form__input-wrapper').addClass('st-form__error');
 		}
 
 		return valid;
@@ -68,13 +69,16 @@
 		var valid = true;
 
 		$selector.each(function () {
-			if (this.value.length === 0) {
-				$(this).closest('.st-form__input-wrapper').addClass('TESTCLASS');
+			var inputValue = this.value;
+			var inputLength = this.value.length;
+
+			if (inputLength === 0 || !/\S/.test(inputValue)) {
+				console.log('are we here' + inputLength);
+				$(this).closest('.st-form__input-wrapper').addClass('st-form__error');
 				valid = false;
 			}
 		});
 
 		return valid;
 	}
-
 })();
