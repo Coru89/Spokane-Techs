@@ -33,10 +33,13 @@
 		$('.st-form__input-wrapper').removeClass('st-form__error');
 
 		if (validateForm()) {
+			$(this).closest('.st-form__input-wrapper').addClass('st-form__loading');
 			// Collect values
 			// make ajax call
 			console.log('form is valid yay, fml.');
 		}
+		// disabled below just to test
+		// $(this).closest('.st-form__input-wrapper').removeClass('st-form__loading');
 	});
 
 	function validateForm() {
@@ -73,7 +76,7 @@
 			var inputLength = this.value.length;
 
 			if (inputLength === 0 || !/\S/.test(inputValue)) {
-				console.log('are we here' + inputLength);
+				// console.log('are we here' + inputLength);
 				$(this).closest('.st-form__input-wrapper').addClass('st-form__error');
 				valid = false;
 			}
