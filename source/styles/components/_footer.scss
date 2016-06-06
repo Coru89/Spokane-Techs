@@ -49,8 +49,11 @@ $block: 'st-footer';
 		}
 
 		&-value a {
-			text-decoration: underline;
 			color: $contacts-value;
+
+			&:hover {
+				text-decoration: underline;
+			}
 		}
 
 		&-type {

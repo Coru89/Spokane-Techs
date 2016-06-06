@@ -10,42 +10,31 @@ $block: 'st-services';
 	& h2 {
 		font-weight: $font-weight-light;
 		font-size: 18px;
-		padding: 15px 5px 15px 5px;
-		margin: 0;
+		margin: 15px 5px;
 		position: relative;
 		text-align: center;
 
 		@media screen and (min-width: 768px) {
 			font-size: 22px;
-			padding-top: 26px;
-			padding-bottom: 32px;
+			margin-top: 26px;
+			margin-bottom: 32px;
 		}
 
 		@media screen and (min-width: 1024px) {
 			font-size: 28px;
-			padding-top: 39px;
-			padding-bottom: 54px;
-		}
-
-		//this puts borders below both H2
-		&:before {
-			content: '';
-			position: absolute;
-			border-bottom: $white solid 1px;
-			bottom: 0;
-			left: -999px;
-			right: -999px;
+			margin-top: 39px;
+			margin-bottom: 54px;
 		}
 
 		& strong {
-			font-weight: $font-weight-bold;
+			font-weight: $font-weight-medium;
 		}
 	}
 
 	h3 {
 		font-weight: $font-weight-light;
 		font-size: 15px;
-		cursor: pointer;
+
 
 		@media screen and (min-width: 768px) {
 			font-size: 16px;
@@ -126,6 +115,7 @@ $block: 'st-services';
 	}
 
 		&-main {
+			border-top: 1px solid $white;
 			border-bottom: 1px solid $white;
 			font-size: 18px;
 			font-weight: $font-weight-bold;
@@ -185,6 +175,10 @@ $block: 'st-services';
 	&__item {
 		position: relative;
 		font-size: 14px;
+
+		&:not(.st-services__item-content) {
+			cursor: pointer;
+		}
 
 		& > * {    //this means target all children
 			position: relative;
@@ -285,3 +279,5 @@ $block: 'st-services';
 		width: 100%;
 	}
 }
+@import './business-services';
+@import './residential-services';

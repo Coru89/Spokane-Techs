@@ -1,9 +1,7 @@
-<header class="st-header">
-	<div class="st-header__image">
-		<img class="st-header__logo" src="../images/logo.png" alt="" />
-		<div class="st-header__contact">
-			<div class="st-header__contact-item st-header__contact-phone"><a href="tel:{{company.contact.phone}}">{{company.contact.phone}}</a></div>
-			<div class="st-header__contact-item st-header__contact-email"><a href="mailto:{{company.contact.email}}">Email</a></div>
-		</div>
+<header class="st-header st-header__background">
+	<img class="st-header__logo" src="../images/logo.png" alt="" />
+	<div class="st-header__contact">
+		<a href="tel:{{company.contact.phoneRaw}}"class="st-header__contact-item st-header__contact-phone">{{company.contact.phone}}</a>
+		<a href="#contact" class="st-header__contact-item st-header__contact-email">Email</a>
 	</div>
 </header>

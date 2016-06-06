@@ -5,46 +5,44 @@
 $block: 'st-header';
 
 .#{$block} {
+	min-height: 173px;
+	position: relative;
+	padding: 15px;
+	box-sizing: border-box;
+	border-bottom: 1px solid $white;
 
-	&__image {
+	@media all and (min-width: 500px) {
+		min-height: 240px;
+	}
+
+	@media all and (min-width: 768px) {
+		min-height: 330px;
+	}
+
+	&__background {
 		background-image: url('/images/spokane.png');
 		background-size: cover;
 		background-repeat: no-repeat;
 		background-position: center;
-		min-height: 173px;
-		position: relative;
-		padding: 15px;
-		box-sizing: border-box;
-		border-bottom: 1px solid $white;
-
-		@media all and (min-width: 500px) {
-			min-height: 240px;
-		}
-
-		@media all and (min-width: 768px) {
-			min-height: 330px;
-		}
 	}
 
 	&__logo {
 		max-width: 100%;
 		height: auto;
-
-		@media all and (min-width: 768px) {
-			width: 300px;
-			height: 75px;
-			max-width: none;
-			max-height: none;
-		}
 	}
 
 	&__contact {
 		position: absolute;
-		left:15px;
+		left: 15px;
 		bottom: 15px;
 
 		a {
-		color: $white;
+			color: $white;
+			text-decoration: none;
+
+			&:visited {
+				color: $white;
+			}
 		}
 
 		@media all and (min-width: 500px) {
@@ -66,8 +64,11 @@ $block: 'st-header';
 			padding: 7px 7px 7px 33px;
 			border: 1px solid $white;
 			border: 1px solid rgba(255, 255, 255, 0.8);
-			background-color: $grey-icon-fill;
 			background-color: rgba(50, 50, 50, 0.6);
+
+			&:hover {
+				background-color: $grey-icon-fill;
+			}
 
 			&:before {
 				background-repeat: no-repeat;

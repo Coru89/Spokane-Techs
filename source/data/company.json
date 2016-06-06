@@ -2,7 +2,8 @@
 {
 	"contact": {
 			"email": "help@spokanetechs.com",
-			"phone": "(509)499 - 4937"
+			"phone": "(509) 499 - 4937",
+			"phoneRaw": "5094994937"
 		},
 
 	"testemonials": [
