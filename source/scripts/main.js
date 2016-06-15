@@ -33,14 +33,55 @@
 		$('.st-form__input-wrapper').removeClass('st-form__error');
 
 		if (validateForm()) {
+			var payload = {};
 			$(this).closest('.st-form__input-wrapper').addClass('st-form__loading');
-			// Collect values
-			// make ajax call
+			payload = collectFormValues();
+			postForm(payload);
 			console.log('form is valid yay, fml.');
 		}
 		// disabled below just to test
 		// $(this).closest('.st-form__input-wrapper').removeClass('st-form__loading');
 	});
+
+	function collectFormValues () {
+		var formData = {};
+		formData.email = $('.st-form__group input:nth-child(1)').val();
+		formData.phone = $('.st-form__group input:nth-child(2)').val();
+		formData.name = $('input:first-of-type').val();
+		formData.description = $('textarea').val();
+		console.log(formData);
+
+		return formData;
+	}
+
+	function postForm (payload) {
+		// $.ajax({
+		// 	type: 'POST',
+		// 	url: 'http://st.mrwebster.net/email.php',
+		// 	// The key needs to match your method's input parameter (case-sensitive).
+		// 	data: JSON.stringify(payload), // {name: string, email: string, phone: string, message: string}
+		// 	contentType: 'application/json; charset=utf-8',
+		// 	dataType: 'json',
+		// 	success: formSubmissionSuccess(formData),
+		// 	failure: function (errMsg) {
+		// 		console.log(errMsg);
+		// 	}
+		// });
+
+		formSubmissionSuccess();
+	}
+
+	function formSubmissionSuccess(data) {
+		//TODO Check for erros
+
+		if (true) { //noerrors
+			//update form
+			console.log('hi');
+		} else {
+			//Show error message on form
+			console.log('hi');
+		}
+	}
 
 	function validateForm() {
 		var formValid = true;
