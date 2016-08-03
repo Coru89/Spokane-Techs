@@ -1,24 +1,24 @@
 # Title should be around 50-60 characters
-title: Habanero Prototype Boilerplate
+title: Spokane Techs
 
 # Description should be around 155 characters
-description: "The Habanero Prototype Boilerplate is a simple template to help you get started."
+description: "Offering experienced professional desktop, laptop, and network support at your convenience for all your computer needs."
 
-keywords: "html, JavaScript, CSS, LESS, boilerplate"
+#keywords: "first, second"
 
-emails:
-	support: support@habaneroconsulting.com
+# emails:
+# 	support:
 
 # twitter:
-#   card: "product"
-#   site: "@HabaneroConsult"
+#   card: ""
+#   site: ""
 
-opengraph:
-  title: "Habanero Prototype Boilerplate"
-  type: "website"
-  sitename: "Habanero Prototype Boilerplate"
-  image: "http://habaneroconsulting.github.io/habanero-prototype-boilerplate/images/opengraph.png"
-  url: "http://habaneroconsulting.github.io/habanero-prototype-boilerplate"
-  locale: "en_US"
-
-gtm: ""
+# opengraph:
+#   title: ""
+#   type: "website"
+#   sitename: ""
+#   image: ""
+#   url: ""
+#   locale: "en_US"
+#
+# gtm: ""

@@ -9,23 +9,23 @@
 	"testemonials": [
 		{
 			"id": 1,
-			"name": "Barbara Fifield",
-			"quote": "I recently had a visit with Mario Diaz, of your company, to help me with my computer which I had been having problems with since I installed Windows 10, and I was very impressed with this young man's demeanor, expertise , skill and personality. Mario helped me a great deal and I would refer him to anyone who asked. I am a senior citizen in a retirement home, living on a fixed income, and he was most generous and I think he should have charged me more, but, again, he was very kind. We need more people in the world like Mario. Thank you so much!"
+			"name": "Whitney Bendewald",
+			"quote": "Since beginning our business relationship with Spokane Techs, our productivity and ease of operation within the office has been superb."
 		},
 		{
 			"id": 2,
-			"name": "Josh Myers",
-			"quote": "Great and Quick service, Very Professional...would recommend any time. =D"
+			"name": "Sondra Morris",
+			"quote": "As a business owner I have used many computer techs over the years and none compare to the service I have received from Spokane Techs..."
 		},
 		{
 			"id": 3,
-			"name": "Allen Johnson",
-			"quote": "They have quickly knocked out numerous issues for me on a custom built desktop I own."
+			"name": "Barbara Fifield",
+			"quote": "I recently had a visit with Mario Diaz, of your company, to help me with my computer which I had been having problems with since I installed Windows 10, and I was very impressed with this young man's demeanor, expertise , skill and personality..."
 		},
 		{
 			"id": 4,
-			"name": "",
-			"quote": ""
+			"name": "Allen Johnson",
+			"quote": "They have quickly knocked out numerous issues for me on a custom built desktop I own."
 		}
 	],
 

@@ -13,3 +13,6 @@ production
 # Sublime Project files
 *.sublime-project
 *.sublime-workspace
+
+#todo file
+todo.md
