@@ -32,7 +32,7 @@
 	$('.st-form__submit').on('click', function () {
 		$('.st-form__input-wrapper').removeClass('st-form__error');
 
-		if (validateForm()) {
+		if (validateForm() && $(this).closest('.st-form__input-wrapper').hasClass('st-form__loading') !== true) {
 			// initiate sending spinner
 			$(this).closest('.st-form__input-wrapper').addClass('st-form__loading');
 			var payload = {};
