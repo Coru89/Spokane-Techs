@@ -27,6 +27,12 @@ $block: 'st-footer';
 		}
 	}
 
+	h3 {
+		color: $contacts-value;
+		font-size: 18px;
+		margin-top: 0;
+	}
+
 	&__logo {
 		background-image: url('/images/logo.png');
 		width: 300px;

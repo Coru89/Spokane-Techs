@@ -33,54 +33,50 @@
 		$('.st-form__input-wrapper').removeClass('st-form__error');
 
 		if (validateForm()) {
-			var payload = {};
+			// initiate sending spinner
 			$(this).closest('.st-form__input-wrapper').addClass('st-form__loading');
+			var payload = {};
 			payload = collectFormValues();
 			postForm(payload);
-			console.log('form is valid yay, fml.');
 		}
-		// disabled below just to test
-		// $(this).closest('.st-form__input-wrapper').removeClass('st-form__loading');
 	});
 
 	function collectFormValues () {
 		var formData = {};
-		formData.email = $('.st-form__group input:nth-child(1)').val();
-		formData.phone = $('.st-form__group input:nth-child(2)').val();
-		formData.name = $('input:first-of-type').val();
-		formData.description = $('textarea').val();
-		console.log(formData);
+		formData.name = $('form [name="name"]').val();
+		formData.email = $('form [name="email"]').val();
+		formData.phone = $('form [name="phone"]').val();
+		formData.message = $('form [name="message"]').val();
+		formData.gotcha = $('form [name="_gotcha"]').val();
 
 		return formData;
 	}
 
 	function postForm (payload) {
-		// $.ajax({
-		// 	type: 'POST',
-		// 	url: 'http://st.mrwebster.net/email.php',
-		// 	// The key needs to match your method's input parameter (case-sensitive).
-		// 	data: JSON.stringify(payload), // {name: string, email: string, phone: string, message: string}
-		// 	contentType: 'application/json; charset=utf-8',
-		// 	dataType: 'json',
-		// 	success: formSubmissionSuccess(formData),
-		// 	failure: function (errMsg) {
-		// 		console.log(errMsg);
-		// 	}
-		// });
+		var subject = 'Spokane Techs Form Submission: ' + payload.name;
 
-		formSubmissionSuccess();
+		// if (payload.gotcha === '') {
+		// 	$.ajax({
+		// 		url: 'https://formspree.io/email@domain.com',
+		// 		method: 'POST',
+		// 		data: {
+		// 			name: payload.name,
+		// 			email: payload.email,
+		// 			phone: payload.phone,
+		// 			message: payload.message,
+		// 			_subject: subject
+		// 		},
+		// 		dataType: 'json',
+		// 		success: formSubmissionSuccess(),
+		// 		failure: function (errMsg) {
+		// 			console.log(errMsg);
+		// 		}
+		// 	});
+		// }
 	}
 
 	function formSubmissionSuccess(data) {
-		//TODO Check for erros
-
-		if (true) { //noerrors
-			//update form
-			console.log('hi');
-		} else {
-			//Show error message on form
-			console.log('hi');
-		}
+		$('.st-form').html('<h3>Your message was successfuly delivered!</h3>');
 	}
 
 	function validateForm() {
@@ -117,7 +113,6 @@
 			var inputLength = this.value.length;
 
 			if (inputLength === 0 || !/\S/.test(inputValue)) {
-				// console.log('are we here' + inputLength);
 				$(this).closest('.st-form__input-wrapper').addClass('st-form__error');
 				valid = false;
 			}
