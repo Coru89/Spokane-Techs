@@ -15,4 +15,5 @@ html {
 body {
 	font-family: $font-family-default, $font-family-fallback1;
 	color: $white;
+	overflow: hidden;
 }
